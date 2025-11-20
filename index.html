@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Matthias Zahner – Redaktion & Social Media</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio von Matthias Zahner – Redakteur und Social-Media-Manager mit journalistischem Hintergrund. Arbeitsproben, Profil und Schwerpunkte.">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-soft: #111827;
+      --accent: #22c55e;
+      --accent-soft: rgba(34, 197, 94, 0.12);
+      --text: #f9fafb;
+      --text-soft: #9ca3af;
+      --border: #1f2937;
+      --card-bg: #020617;
+      --radius-xl: 18px;
+      --radius-xxl: 26px;
+      --shadow-soft: 0 18px 35px rgba(0,0,0,0.40);
+      --shadow-subtle: 0 8px 18px rgba(0,0,0,0.25);
+      --max-width: 1040px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1f2937 0, #020617 55%, #000 100%);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(to bottom, rgba(15,23,42,0.92), rgba(15,23,42,0.75), transparent);
+      border-bottom: 1px solid rgba(15,23,42,0.6);
+    }
+
+    .nav {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 18px 20px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .avatar-circle {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #22c55e, #14532d);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 16px;
+      color: #e5fbe9;
+      box-shadow: 0 0 0 2px rgba(34,197,94,0.35);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .brand-text strong {
+      font-size: 14px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .brand-text span {
+      font-size: 12px;
+      color: var(--text-soft);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      font-size: 13px;
+    }
+
+    .nav-links a {
+      color: var(--text-soft);
+      text-decoration: none;
+      padding: 6px 0;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 0;
+      height: 1.5px;
+      background: linear-gradient(to right, #22c55e, #a3e635);
+      transition: width 0.18s ease-out;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(34,197,94,0.55);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      text-decoration: none;
+      background: radial-gradient(circle at top left, rgba(34,197,94,0.18), rgba(34,197,94,0.02));
+      box-shadow: 0 0 0 1px rgba(22,163,74,0.2), 0 10px 20px rgba(0,0,0,0.45);
+      color: #dcfce7;
+    }
+
+    .nav-cta span {
+      font-size: 14px;
+    }
+
+    .nav-cta:hover {
+      box-shadow: 0 12px 26px rgba(0,0,0,0.6);
+      transform: translateY(-1px);
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .hero {
+      max-width: var(--max-width);
+      margin: 16px auto 0;
+      padding: 24px 20px 40px;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.6fr);
+      gap: 32px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      font-size: 11px;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      background: rgba(15,23,42,0.85);
+      border: 1px solid rgba(148,163,184,0.3);
+      color: #e5e7eb;
+      margin-bottom: 14px;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 4px rgba(34,197,94,0.16);
+    }
+
+    h1 {
+      font-size: clamp(30px, 4vw, 38px);
+      line-height: 1.08;
+      margin: 0 0 14px;
+      letter-spacing: -0.02em;
+    }
+
+    h1 span.accent {
+      background: linear-gradient(120deg, #22c55e, #a3e635);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-lead {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--text-soft);
+      max-width: 520px;
+      margin-bottom: 22px;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 26px;
+    }
+
+    .chip {
+      font-size: 12px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.35);
+      color: #e5e7eb;
+      background: rgba(15,23,42,0.85);
+    }
+
+    .chip.accent-chip {
+      border-color: rgba(34,197,94,0.6);
+      background: rgba(22,163,74,0.12);
+      color: #bbf7d0;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: none;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: #022c22;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.55);
+    }
+
+    .btn-ghost {
+      font-size: 13px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.45);
+      color: var(--text-soft);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      background: rgba(15,23,42,0.85);
+    }
+
+    .btn-ghost span {
+      font-size: 16px;
+    }
+
+    .hero-meta {
+      margin-top: 14px;
+      font-size: 12px;
+      color: var(--text-soft);
+    }
+
+    .hero-meta strong {
+      color: #e5e7eb;
+    }
+
+    .hero-right {
+      background: radial-gradient(circle at top, rgba(34,197,94,0.18), rgba(15,23,42,0.98));
+      border-radius: var(--radius-xxl);
+      border: 1px solid rgba(148,163,184,0.28);
+      padding: 18px 18px 18px;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .hero-card {
+      background: rgba(15,23,42,0.92);
+      border-radius: 16px;
+      padding: 12px 12px 11px;
+      border: 1px solid rgba(15,23,42,0.9);
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .hero-card h3 {
+      margin: 0 0 5px;
+      font-size: 13px;
+    }
+
+    .hero-card p {
+      margin: 0;
+      font-size: 11px;
+      line-height: 1.5;
+      color: var(--text-soft);
+    }
+
+    .hero-stat {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+
+    .hero-pill {
+      position: absolute;
+      bottom: 14px;
+      right: 16px;
+      font-size: 11px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(148,163,184,0.3);
+      color: var(--text-soft);
+    }
+
+    section {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 20px 42px;
+    }
+
+    section > header {
+      position: static;
+      backdrop-filter: none;
+      background: none;
+      border-bottom: none;
+      padding: 0;
+      margin-bottom: 14px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--text-soft);
+      margin-bottom: 4px;
+    }
+
+    .section-title {
+      font-size: 20px;
+      margin: 0 0 6px;
+      letter-spacing: -0.02em;
+    }
+
+    .section-sub {
+      font-size: 13px;
+      color: var(--text-soft);
+      max-width: 620px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.2fr);
+      gap: 24px;
+      align-items: flex-start;
+    }
+
+    .card {
+      background: var(--bg-soft);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border);
+      padding: 18px 18px 16px;
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .card h3 {
+      margin: 0 0 6px;
+      font-size: 15px;
+    }
+
+    .card p {
+      margin: 0 0 8px;
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--text-soft);
+    }
+
+    .meta-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--text-soft);
+    }
+
+    .meta-list li::before {
+      content: "•";
+      margin-right: 6px;
+      color: var(--accent);
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+
+    .pill {
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(55,65,81,0.9);
+      font-size: 11px;
+      color: var(--text-soft);
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .skill-card {
+      background: var(--bg-soft);
+      border-radius: 16px;
+      padding: 13px 13px 12px;
+      border: 1px solid var(--border);
+      font-size: 13px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.45);
+    }
+
+    .skill-card h3 {
+      margin: 0 0 4px;
+      font-size: 14px;
+    }
+
+    .skill-card p {
+      margin: 0 0 6px;
+      color: var(--text-soft);
+      line-height: 1.6;
+    }
+
+    .skill-meta {
+      font-size: 11px;
+      color: var(--text-soft);
+    }
+
+    .skill-meta strong {
+      color: #e5e7eb;
+    }
+
+    .work-section {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.6fr);
+      gap: 22px;
+      align-items: flex-start;
+    }
+
+    .work-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .work-item {
+      background: var(--bg-soft);
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      padding: 11px 12px 10px;
+      font-size: 13px;
+    }
+
+    .work-item-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .work-item-title {
+      font-weight: 600;
+    }
+
+    .work-item-tag {
+      font-size: 11px;
+      padding: 3px 7px;
+      border-radius: 999px;
+      background: rgba(22,163,74,0.14);
+      border: 1px solid rgba(34,197,94,0.55);
+      color: #bbf7d0;
+    }
+
+    .work-item a {
+      font-size: 12px;
+    }
+
+    .work-item p {
+      margin: 2px 0 4px;
+      color: var(--text-soft);
+      line-height: 1.5;
+    }
+
+    .work-meta-line {
+      font-size: 11px;
+      color: #6b7280;
+    }
+
+    .work-columns {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 10px;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .process-card {
+      background: var(--bg-soft);
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      padding: 12px 12px 11px;
+      font-size: 13px;
+    }
+
+    .process-step {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--text-soft);
+      margin-bottom: 4px;
+    }
+
+    .process-card h3 {
+      margin: 0 0 4px;
+      font-size: 14px;
+    }
+
+    .process-card p {
+      margin: 0;
+      color: var(--text-soft);
+      line-height: 1.6;
+    }
+
+    .contact-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.1fr);
+      gap: 20px;
+      align-items: center;
+    }
+
+    .contact-box {
+      background: var(--bg-soft);
+      border-radius: var(--radius-xl);
+      padding: 18px 18px 16px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .contact-box p {
+      margin: 0 0 10px;
+      font-size: 13px;
+      color: var(--text-soft);
+      line-height: 1.7;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .contact-mail {
+      font-size: 13px;
+      padding: 8px 13px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.5);
+      background: rgba(15,23,42,0.9);
+      text-decoration: none;
+      color: #e5e7eb;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .contact-mail span {
+      font-size: 18px;
+    }
+
+    form {
+      display: grid;
+      gap: 8px;
+      font-size: 12px;
+    }
+
+    label {
+      display: grid;
+      gap: 4px;
+    }
+
+    input, textarea {
+      padding: 7px 9px;
+      border-radius: 10px;
+      border: 1px solid rgba(55,65,81,0.9);
+      background: rgba(15,23,42,0.9);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 13px;
+    }
+
+    textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #6b7280;
+    }
+
+    .form-note {
+      font-size: 11px;
+      color: var(--text-soft);
+      margin-top: 2px;
+    }
+
+    .form-submit {
+      margin-top: 4px;
+      justify-self: flex-start;
+    }
+
+    footer {
+      border-top: 1px solid rgba(15,23,42,0.95);
+      padding: 16px 20px 18px;
+      margin-top: 10px;
+      font-size: 11px;
+      color: var(--text-soft);
+      background: radial-gradient(circle at top, rgba(15,23,42,0.9), #020617);
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .footer-inner span strong {
+      color: #e5e7eb;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--text-soft);
+      font-size: 11px;
+    }
+
+    @media (max-width: 880px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+        margin-top: 8px;
+      }
+
+      .hero-right {
+        order: -1;
+      }
+
+      .two-col,
+      .work-section,
+      .contact-card {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 16px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .grid-3,
+      .process-grid,
+      .work-columns {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero {
+        padding-inline: 16px;
+      }
+
+      section {
+        padding-inline: 16px;
+      }
+
+      .hero-right {
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<div class="page">
+  <header>
+    <div class="nav">
+      <div class="nav-left">
+        <div class="avatar-circle">MZ</div>
+        <div class="brand-text">
+          <strong>Matthias Zahner</strong>
+          <span>Redaktion · Social Media · Kommunikation</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#about">Über mich</a>
+        <a href="#focus">Schwerpunkte</a>
+        <a href="#work">Arbeitsproben</a>
+        <a href="#contact">Kontakt</a>
+        <a href="#contact" class="nav-cta">
+          <span>•</span> Lass uns sprechen
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div>
+        <div class="badge">
+          <div class="badge-dot"></div>
+          Verbindet Journalismus & Unternehmenskommunikation
+        </div>
+        <h1>
+          Redaktion & Social Media<br>
+          für <span class="accent">klare, glaubwürdige Kommunikation</span>.
+        </h1>
+        <p class="hero-lead">
+          Ich bin Redakteur mit journalistischem Hintergrund und Social-Media-Schwerpunkt.
+          Ich helfe Unternehmen, Projekte und Organisationen so zu erzählen, dass sie verstanden
+          werden – von der klassischen Pressearbeit bis zum Instagram-Reel.
+        </p>
+        <div class="hero-tags">
+          <span class="chip accent-chip">Redaktion & Storytelling</span>
+          <span class="chip">Social-Media-Content</span>
+          <span class="chip">Unternehmenskommunikation</span>
+          <span class="chip">Pressearbeit & Vereine</span>
+        </div>
+        <div class="hero-actions">
+          <a href="#work" class="btn-primary">
+            Arbeitsproben ansehen
+            <span>↘</span>
+          </a>
+          <a href="#about" class="btn-ghost">
+            <span>◎</span> Mehr über mich
+          </a>
+        </div>
+        <div class="hero-meta">
+          <strong>Aktueller Fokus:</strong> Einstieg in die Unternehmenskommunikation –
+          an der Schnittstelle von Redaktion, Social Media und strategischer Kommunikation.
+        </div>
+      </div>
+
+      <aside class="hero-right">
+        <div class="hero-grid">
+          <div class="hero-card">
+            <h3>Journalistischer Hintergrund</h3>
+            <p>
+              Volontierter Redakteur mit mehrjähriger Erfahrung im Newsroom
+              und in der lokalen Berichterstattung.
+            </p>
+          </div>
+
+          <div class="hero-card">
+            <h3>Unternehmenskommunikation</h3>
+            <p>
+              Social Media, interne Kommunikation und Marketingaktionen
+              in einem Großklinikum – mit Fokus auf Zielgruppen und Tonalität.
+            </p>
+          </div>
+
+          <div class="hero-card">
+            <div class="hero-stat">Sport & Vereine</div>
+            <p>
+              Ehrenamtlicher Pressesprecher und Social-Media-Betreuung
+              für einen Tennisclub – von Pressemitteilung bis Turnier-Reel.
+            </p>
+          </div>
+
+          <div class="hero-card">
+            <h3>Weiterbildung Social Media</h3>
+            <p>
+              Berufsbegleitende Weiterbildung im Social-Media-Marketing:
+              Strategie, Content-Formate, Plattformlogiken, Ads-Grundlagen.
+            </p>
+          </div>
+        </div>
+
+        <div class="hero-pill">
+          Praxis aus Redaktion, Klinikkommunikation & Vereinsarbeit.
+        </div>
+      </aside>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <header>
+        <div class="section-label">Über mich</div>
+        <h2 class="section-title">Redakteur mit Blick für Content & Kanäle</h2>
+        <p class="section-sub">
+          Ich komme aus dem Journalismus, denke in Geschichten und Zielgruppen
+          und übersetze Inhalte in Formate – von der Reportage über Blogartikel
+          bis zur Social-Media-Serie. Mein Ziel: Kommunikation, die verständlich,
+          glaubwürdig und nah an den Menschen ist.
+        </p>
+      </header>
+
+      <div class="two-col">
+        <div class="card">
+          <h3>Profil</h3>
+          <p>
+            Nach meinem Journalistik-Studium (B.A.) war ich mehrere Jahre als Redakteur tätig
+            und habe lokale Themen, Menschen und Geschichten für verschiedene Zielgruppen
+            aufbereitet. Im Anschluss habe ich in der Unternehmenskommunikation eines
+            Klinikums gearbeitet – mit Fokus auf Social Media, interne Kommunikation
+            und Marketingaktionen.
+          </p>
+          <p>
+            Parallel dazu engagiere ich mich als Pressesprecher für einen Tennisclub
+            und betreue dort sowohl die klassische Pressearbeit als auch Social-Media-Kanäle.
+            Aktuell absolviere ich eine berufsbegleitende Weiterbildung im
+            Social-Media-Marketing.
+          </p>
+
+          <ul class="meta-list">
+            <li>Journalistik-Studium (B.A.), Macromedia Hochschule</li>
+            <li>Volontariat & mehrjährige Erfahrung als Redakteur</li>
+            <li>Social-Media- und Marketingpraxis in der Unternehmenskommunikation</li>
+            <li>Pressearbeit & Social Media im Sportverein</li>
+          </ul>
+
+          <div class="pill-row">
+            <span class="pill">Storytelling</span>
+            <span class="pill">Redaktionelle Konzepte</span>
+            <span class="pill">Content-Planung</span>
+            <span class="pill">Community Management</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Wohin ich will</h3>
+          <p>
+            Ich möchte mich langfristig in der Unternehmenskommunikation etablieren –
+            idealerweise dort, wo klassische Pressearbeit und digitale Kanäle ineinandergreifen:
+            Presseinfos, Website, Newsletter, Social Media, interne Formate.
+          </p>
+          <p>
+            Ich arbeite gern konzeptionell, klar strukturiert und pragmatisch:
+            lieber eine saubere Story mit klarem Ziel, als zehn lose Ideen ohne Wirkung.
+          </p>
+
+          <ul class="meta-list">
+            <li>Schnittstelle von Redaktion, Social Media & Strategie</li>
+            <li>Kommunikation, die Positionen klärt statt sie zu vernebeln</li>
+            <li>Saubere, verständliche Sprache – ohne Marketing-Worthülsen</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOCUS -->
+    <section id="focus">
+      <header>
+        <div class="section-label">Schwerpunkte</div>
+        <h2 class="section-title">Was ich konkret einbringe</h2>
+        <p class="section-sub">
+          Ich bringe journalistische Sorgfalt, Social-Media-Know-how und ein Verständnis
+          für Organisationen zusammen. Einige Schwerpunkte, die ich in Projekte mitnehme:
+        </p>
+      </header>
+
+      <div class="grid-3">
+        <div class="skill-card">
+          <h3>Redaktion & Storytelling</h3>
+          <p>
+            Recherchieren, strukturieren, verständlich machen: von der Pressemitteilung
+            über Blogartikel bis zur Storyline für eine Kampagne.
+          </p>
+          <div class="skill-meta">
+            <strong>Formate:</strong> Artikel, Reportagen, Blogposts, Newsletter, Presseinfos
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3>Social-Media-Content</h3>
+          <p>
+            Reels, Posts, Serienformate: zielgruppengerecht, umsetzbar und mit Blick
+            auf Tonalität, Timing und Community.
+          </p>
+          <div class="skill-meta">
+            <strong>Plattformen:</strong> Instagram, Facebook, Blog · Reels, Kurzvideos, Bildposts
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3>Unternehmenskommunikation & PR</h3>
+          <p>
+            Themen aus dem Unternehmen heraus entwickeln und so erzählen, dass sie intern wie extern ankommen.
+          </p>
+          <div class="skill-meta">
+            <strong>Bereiche:</strong> Pressearbeit, interne Kommunikation, Website & Aktionen
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work">
+      <header>
+        <div class="section-label">Arbeitsproben</div>
+        <h2 class="section-title">Ausgewählte Projekte & Beispiele</h2>
+        <p class="section-sub">
+          Ein paar Einblicke in meine Arbeit – von Social-Media-Reels über Blogartikel
+          bis zur Vereinskommunikation. Weitere Beispiele stelle ich auf Anfrage gern zusammen.
+        </p>
+      </header>
+
+      <div class="work-section">
+        <div class="work-list">
+          <div class="work-item">
+            <div class="work-item-header">
+              <span class="work-item-title">Reels rund um Klinik-Alltag & Aktionen</span>
+              <span class="work-item-tag">Social Media · Reels</span>
+            </div>
+            <p>
+              Kurze, zielgruppengerechte Reels für Instagram – von saisonalen Anlässen
+              bis zu Einblicken in den Klinikalltag.
+            </p>
+            <a href="https://www.instagram.com/reel/DGi5luPNKJ7/" target="_blank" rel="noreferrer">
+              Fasnet-Reel im Klinik-Kontext
+            </a>
+            <br>
+            <a href="https://www.instagram.com/reel/DF73-Cwypj1/" target="_blank" rel="noreferrer">
+              Reel zum Tag des Notrufs
+            </a>
+            <br>
+            <a href="https://www.instagram.com/reel/DEQV-hPI622/" target="_blank" rel="noreferrer">
+              Neujahrsgrüße & Jahresauftakt
+            </a>
+            <p class="work-meta-line">
+              Rolle: Idee, Konzeption, Text/Bildsprache, Schnitt & Umsetzung.
+            </p>
+          </div>
+
+          <div class="work-item">
+            <div class="work-item-header">
+              <span class="work-item-title">Blogartikel „Sterilisationsassistent“</span>
+              <span class="work-item-tag">Blog · Storytelling</span>
+            </div>
+            <p>
+              Einblicke in einen wenig bekannten, aber zentralen Beruf im Klinikbetrieb –
+              verständlich, nah an den Menschen und mit Fokus auf Wertschätzung.
+            </p>
+            <a href="https://www.sbk-vs.de/blog/blog_details.php/Steril-sicher-und-spannend-Einblicke-in-den-anspruchsvollen-Job-des-Sterilisationsassistenten-3037" target="_blank" rel="noreferrer">
+              Blogbeitrag lesen
+            </a>
+            <p class="work-meta-line">
+              Rolle: Recherche, Interviewführung, Text, Abstimmung mit Fachbereich.
+            </p>
+          </div>
+
+          <div class="work-item">
+            <div class="work-item-header">
+              <span class="work-item-title">Blogartikel „Case Managerin“</span>
+              <span class="work-item-tag">Blog · Porträt</span>
+            </div>
+            <p>
+              Porträt über die Arbeit als Case-Managerin im Krankenhaus – mit Fokus
+              auf Patientenperspektive und zwischenmenschliche Aspekte.
+            </p>
+            <a href="https://www.sbk-vs.de/blog/blog_details.php/+Unglaubliche-Dankbarkeit-Case-Manager-bekommen-viel-zur%C3%BCck-2990" target="_blank" rel="noreferrer">
+              Blogbeitrag lesen
+            </a>
+            <p class="work-meta-line">
+              Rolle: Konzeption, Interview, Text, Feinschliff in enger Abstimmung mit der Praxis.
+            </p>
+          </div>
+        </div>
+
+        <div class="work-columns">
+          <div class="work-item">
+            <div class="work-item-header">
+              <span class="work-item-title">Vereinskommunikation Tennisclub</span>
+              <span class="work-item-tag">Presse & Social Media</span>
+            </div>
+            <p>
+              Als ehrenamtlicher Pressesprecher eines Tennisclubs verfasse ich
+              regelmäßig Pressemitteilungen und Berichte für die lokale Berichterstattung
+              und bereite Turniere und Aktionen für Social Media auf.
+            </p>
+            <p class="work-meta-line">
+              Rolle: Pressemitteilungen, Spielberichte, Turnierkommunikation,
+              Social-Media-Inhalte, Abstimmung mit Vorstand & Lokalpresse.
+            </p>
+          </div>
+
+          <div class="work-item">
+            <div class="work-item-header">
+              <span class="work-item-title">Weitere Social-Media-Reels & Formate</span>
+              <span class="work-item-tag">Social Media</span>
+            </div>
+            <p>
+              Unterschiedliche Reels zu saisonalen Anlässen, Aktionen
+              und Einblicken in den Alltag – jeweils mit klarer Idee und
+              angepasster Tonalität.
+            </p>
+            <a href="https://www.instagram.com/reel/DD6ZcS5tqqc/" target="_blank" rel="noreferrer">
+              Weihnachtsgruß / Klinik
+            </a>
+            <br>
+            <a href="https://www.instagram.com/reel/DDB6rH_PDVO/" target="_blank" rel="noreferrer">
+              Weihnachtsbaum-Aktion
+            </a>
+            <br>
+            <a href="https://www.instagram.com/reel/DCySqUktK3h/" target="_blank" rel="noreferrer">
+              Schulstation / Einblicke
+            </a>
+            <br>
+            <a href="https://www.instagram.com/reel/DByDpMCNDwG/" target="_blank" rel="noreferrer">
+              Halloween-Reel
+            </a>
+            <p class="work-meta-line">
+              Rolle: Idee, Text, Bildsprache, Schnitt, Feinschliff.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process">
+      <header>
+        <div class="section-label">Arbeitsweise</div>
+        <h2 class="section-title">Wie ich an Projekte herangehe</h2>
+        <p class="section-sub">
+          Ich denke vom Ziel her, arbeite sauber strukturiert und mag klare Entscheidungen.
+          Lieber eine Linie, die trägt, als fünf Kampagnenideen, die niemand umsetzt.
+        </p>
+      </header>
+
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="process-step">01 · Analyse</div>
+          <h3>Situation & Ziel klären</h3>
+          <p>
+            Was soll erreicht werden, wen wollen wir erreichen und auf welchen Kanälen?
+            Erst wenn das steht, geht es in die Ideenfindnung.
+          </p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-step">02 · Konzept</div>
+          <h3>Story & Formate festlegen</h3>
+          <p>
+            Inhalte werden zu einer klaren Storyline gebündelt: passende Formate,
+            Tonalität, Frequenz und Aufwand im Blick.
+          </p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-step">03 · Umsetzung</div>
+          <h3>Pragmatisch produzieren</h3>
+          <p>
+            Texte, Reels, Posts, Blogartikel – so produziert, dass sie in den Alltag
+            der Organisation passen und langfristig machbar sind.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <header>
+        <div class="section-label">Kontakt</div>
+        <h2 class="section-title">Lass uns über Kommunikation sprechen</h2>
+        <p class="section-sub">
+          Ob Sie Unterstützung für Social Media, redaktionelle Formate oder
+          die Unternehmenskommunikation insgesamt suchen – ich freue mich über
+          einen Austausch.
+        </p>
+      </header>
+
+      <div class="contact-card">
+        <div class="contact-box">
+          <p>
+            Am besten erreichen Sie mich per E-Mail. Auf Wunsch stelle ich gerne
+            weitere Arbeitsproben zusammen oder erläutere meine Rolle in den hier
+            gezeigten Projekten.
+          </p>
+          <div class="contact-row">
+            <a href="mailto:matthias.zahner2311@gmail.com" class="contact-mail">
+              <span>✉</span>
+              <span>E-Mail schreiben</span>
+            </a>
+          </div>
+          <div class="form-note">
+            Hinweis: Das Kontaktformular ist ein statisches Beispiel. Für produktiven Einsatz
+            sollte es an ein Mailsystem oder Backend angebunden werden.
+          </div>
+        </div>
+
+        <div class="contact-box">
+          <form>
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Ihr Name">
+            </label>
+            <label>
+              E-Mail
+              <input type="email" name="email" placeholder="Ihre E-Mail-Adresse">
+            </label>
+            <label>
+              Nachricht
+              <textarea name="message" placeholder="Worum geht es?"></textarea>
+            </label>
+            <button type="submit" class="btn-primary form-submit">
+              Senden (Demo)
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>© <strong>Matthias Zahner</strong> · Redaktion & Social Media</span>
+      <div class="footer-links">
+        <a href="#top">Nach oben</a>
+        <a href="#work">Arbeitsproben</a>
+        <a href="#contact">Kontakt</a>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
