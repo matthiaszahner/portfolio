@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Matthias Zahner – Redakteur, Social Media & Unternehmenskommunikation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portfolio von Matthias Zahner, Redakteur und Social-Media-Manager mit Schwerpunkt Unternehmenskommunikation, Social Media und Sport- bzw. Vereinskommunikation. Arbeitsproben aus Redaktion, Online-Journalismus und Social Media.">
+  <meta name="description" content="Matthias Zahner ist Redakteur und Social-Media-Manager mit Schwerpunkt Unternehmenskommunikation, Social Media und Sport- bzw. Vereinskommunikation. Portfolio mit Arbeitsproben aus Redaktion, Online-Journalismus und Social Media.">
   <link rel="canonical" href="https://matthiaszahner.github.io/portfolio/">
   <meta name="robots" content="index,follow">
 
@@ -125,6 +125,8 @@
       gap: 18px;
       align-items: center;
       font-size: 13px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
     .nav-links a {
@@ -277,6 +279,7 @@
       font-weight: 600;
       text-decoration: none;
       box-shadow: var(--shadow-soft);
+      cursor: pointer;
     }
 
     .btn-primary:hover {
@@ -710,14 +713,37 @@
       font-size: 11px;
     }
 
+    /* Tablet / kleines Notebook */
     @media (max-width: 880px) {
+      .nav {
+        padding: 12px 16px 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+        gap: 8px 16px;
+        font-size: 12px;
+      }
+
+      .nav-cta {
+        margin-left: auto;
+        padding: 6px 10px;
+        font-size: 11px;
+      }
+
       .hero {
         grid-template-columns: minmax(0, 1fr);
         margin-top: 8px;
+        padding: 20px 16px 32px;
       }
 
       .hero-right {
         order: -1;
+        max-width: 420px;
+        margin: 0 auto 12px;
       }
 
       .two-col,
@@ -726,32 +752,64 @@
         grid-template-columns: minmax(0, 1fr);
       }
 
-      .nav-links {
-        display: none;
-      }
-
-      .hero {
-        padding-top: 16px;
+      section {
+        padding-inline: 16px;
       }
     }
 
+    /* Smartphone */
     @media (max-width: 720px) {
+      .nav {
+        padding: 10px 12px 8px;
+      }
+
+      .brand-text strong {
+        font-size: 13px;
+      }
+
+      .brand-text span {
+        font-size: 11px;
+      }
+
+      .nav-links {
+        font-size: 11px;
+        gap: 6px 12px;
+      }
+
+      h1 {
+        font-size: 26px;
+        line-height: 1.15;
+      }
+
+      .hero-lead {
+        font-size: 14px;
+      }
+
+      .hero {
+        padding-inline: 12px;
+      }
+
+      section {
+        padding-inline: 12px;
+      }
+
+      .hero-right {
+        padding: 14px;
+      }
+
+      .hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
       .grid-3,
       .process-grid,
       .work-columns {
         grid-template-columns: minmax(0, 1fr);
       }
 
-      .hero {
-        padding-inline: 16px;
-      }
-
-      section {
-        padding-inline: 16px;
-      }
-
-      .hero-right {
-        padding: 16px;
+      .btn-primary,
+      .btn-ghost {
+        font-size: 13px;
       }
     }
   </style>
@@ -794,8 +852,7 @@
         </h1>
         <p class="hero-lead">
           Ich bin Redakteur mit journalistischem Hintergrund und Social-Media-Schwerpunkt.
-          Ich helfe Unternehmen, Projekte und Organisationen so zu erzählen, dass sie verstanden
-          werden – von der klassischen Pressearbeit bis zum Instagram-Reel.
+          Ich bringe Themen auf den Punkt – redaktionell fundiert, digital gedacht.
         </p>
         <div class="hero-tags">
           <span class="chip accent-chip">Redaktion & Storytelling</span>
@@ -825,6 +882,9 @@
           border-radius: 22px;
           box-shadow: 0 10px 30px rgba(0,0,0,0.4);
           margin-bottom: 20px;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
         ">
         <div class="hero-grid">
           <div class="hero-card">
@@ -913,11 +973,11 @@
 
         <div class="card">
           <h3>Kommunikative Ausrichtung</h3>
-<p>
-  Ich arbeite an der Schnittstelle von klassischer Pressearbeit und digitalen Kanälen:
-  Presseinfos, Website, Newsletter, Social Media und interne Formate. Diesen Mix setze ich
-  besonders gern dort ein, wo Kommunikation strategisch gedacht und pragmatisch umgesetzt wird.
-</p>
+          <p>
+            Ich arbeite an der Schnittstelle von klassischer Pressearbeit und digitalen Kanälen:
+            Presseinfos, Website, Newsletter, Social Media und interne Formate. Diesen Mix setze ich
+            besonders gern dort ein, wo Kommunikation strategisch gedacht und pragmatisch umgesetzt wird.
+          </p>
           <p>
             Ich arbeite gern konzeptionell, klar strukturiert und pragmatisch:
             lieber eine saubere Story mit klarem Ziel als zehn lose Ideen ohne Wirkung.
