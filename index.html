@@ -3,54 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <title>Matthias Zahner – Redaktion, Social Media & Unternehmenskommunikation</title>
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description"
-        content="Matthias Zahner ist Redakteur und Social-Media-Manager mit journalistischem Hintergrund. Schwerpunkt: Unternehmenskommunikation, Social Media, Pressearbeit und Sport- & Vereinskommunikation.">
+
+  <meta name="description" content="Matthias Zahner – Redakteur und Social-Media-Manager mit journalistischem Hintergrund. Schwerpunkt Unternehmenskommunikation, Social Media, Pressearbeit und Vereinskommunikation. Portfolio mit Arbeitsproben.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://matthiaszahner.github.io/portfolio/">
 
-  <!-- SEO / Person Schema -->
+  <!-- SEO Person Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Matthias Zahner",
     "jobTitle": "Redakteur und Social-Media-Manager",
-    "description": "Redakteur mit Schwerpunkt Unternehmenskommunikation, Social Media und journalistischer Storytelling-Kompetenz.",
+    "description": "Redakteur mit Schwerpunkt Unternehmenskommunikation, Social Media und journalistischem Storytelling.",
     "url": "https://matthiaszahner.github.io/portfolio/",
-    "email": "mailto:matthias.zahner2311@gmail.com"
+    "sameAs": [
+      "https://www.linkedin.com/"
+    ]
   }
   </script>
 
   <style>
     :root {
-      --bg: #f5f7fb;
-      --card: #ffffff;
+      --bg: #ffffff;
+      --bg-soft: #f5f7fb;
+      --accent: #2563eb;
       --text: #0f172a;
       --text-soft: #475569;
       --border: #e5e7eb;
-      --accent: #2563eb;
-      --accent-soft: rgba(37,99,235,0.08);
       --radius: 18px;
-      --shadow: 0 12px 30px rgba(15,23,42,0.08);
-      --max-width: 1040px;
+      --shadow: 0 14px 30px rgba(15,23,42,0.08);
+      --max: 1040px;
     }
 
     * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
     }
 
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
     header {
       position: sticky;
@@ -62,8 +60,8 @@
     }
 
     .nav {
-      max-width: var(--max-width);
-      margin: 0 auto;
+      max-width: var(--max);
+      margin: auto;
       padding: 14px 20px;
       display: flex;
       justify-content: space-between;
@@ -73,93 +71,33 @@
     }
 
     .brand {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .logo {
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #2563eb, #1e40af);
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       font-weight: 700;
+      letter-spacing: .04em;
     }
 
-    .brand strong {
-      display: block;
+    .nav a {
       font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .brand span {
-      font-size: 12px;
       color: var(--text-soft);
     }
 
-    .nav-links {
-      display: flex;
-      gap: 16px;
-      font-size: 13px;
-      flex-wrap: wrap;
-    }
-
-    main {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 32px 20px 60px;
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 40px;
-      align-items: center;
-      margin-bottom: 60px;
-    }
+    main { max-width: var(--max); margin: auto; padding: 32px 20px; }
 
     h1 {
       font-size: clamp(28px, 4vw, 38px);
-      line-height: 1.15;
-      margin: 0 0 14px;
+      margin-bottom: 12px;
     }
 
-    h1 span {
-      color: var(--accent);
-    }
+    h1 span { color: var(--accent); }
 
     .lead {
-      font-size: 15px;
+      font-size: 16px;
+      max-width: 620px;
       color: var(--text-soft);
-      margin-bottom: 22px;
-      max-width: 520px;
     }
 
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 24px;
-    }
-
-    .tag {
-      padding: 6px 12px;
-      border-radius: 999px;
-      font-size: 12px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      border: 1px solid rgba(37,99,235,0.3);
-    }
-
-    .cta {
-      display: inline-flex;
-      gap: 10px;
-      align-items: center;
+    .btn {
+      display: inline-block;
+      margin-top: 18px;
       padding: 10px 18px;
       border-radius: 999px;
       background: var(--accent);
@@ -168,29 +106,34 @@
       box-shadow: var(--shadow);
     }
 
-    .hero-right {
-      background: var(--card);
+    section {
+      margin-top: 60px;
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .card {
+      background: var(--bg-soft);
+      padding: 20px;
       border-radius: var(--radius);
-      padding: 22px;
       box-shadow: var(--shadow);
-      text-align: center;
+      border: 1px solid var(--border);
     }
 
-    .hero-right img {
-      max-width: 240px;
-      width: 100%;
-      border-radius: 20px;
-      margin-bottom: 20px;
-    }
-
-    /* VIDEO */
+    /* Video */
     .video-wrapper {
       position: relative;
+      width: 100%;
+      max-width: 420px;
       padding-top: 177.77%;
+      margin-top: 20px;
       border-radius: 20px;
       overflow: hidden;
       box-shadow: var(--shadow);
-      margin-top: 20px;
+      background: #000;
     }
 
     .video-wrapper iframe {
@@ -201,38 +144,19 @@
       border: 0;
     }
 
-    section {
-      margin-bottom: 60px;
-    }
-
-    section h2 {
-      font-size: 22px;
-      margin-bottom: 12px;
-    }
-
-    section p {
-      color: var(--text-soft);
-      max-width: 720px;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
     }
 
     footer {
-      border-top: 1px solid var(--border);
+      margin-top: 80px;
       padding: 20px;
-      text-align: center;
+      border-top: 1px solid var(--border);
       font-size: 12px;
       color: var(--text-soft);
-      background: #fff;
-    }
-
-    /* Responsive */
-    @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-right {
-        order: -1;
-      }
+      text-align: center;
     }
   </style>
 </head>
@@ -241,16 +165,10 @@
 
 <header>
   <div class="nav">
-    <div class="brand">
-      <div class="logo">MZ</div>
-      <div>
-        <strong>Matthias Zahner</strong>
-        <span>Redaktion · Social Media · Kommunikation</span>
-      </div>
-    </div>
-    <nav class="nav-links">
-      <a href="#about">Über mich</a>
-      <a href="#video">Kurz vorgestellt</a>
+    <div class="brand">Matthias Zahner</div>
+    <nav>
+      <a href="#about">Über mich</a> ·
+      <a href="#work">Arbeitsproben</a> ·
       <a href="#contact">Kontakt</a>
     </nav>
   </div>
@@ -259,74 +177,76 @@
 <main>
 
   <!-- HERO -->
-  <section class="hero">
-    <div>
-      <h1>
-        Matthias Zahner – Redaktion & Social Media<br>
-        für <span>klare, glaubwürdige Kommunikation</span>
-      </h1>
-
-      <p class="lead">
-        Ich bin Redakteur mit journalistischem Hintergrund und Social-Media-Schwerpunkt.
-        Ich bringe Themen verständlich auf den Punkt – redaktionell sauber, digital gedacht.
-      </p>
-
-      <div class="tags">
-        <span class="tag">Journalismus</span>
-        <span class="tag">Unternehmenskommunikation</span>
-        <span class="tag">Social Media</span>
-        <span class="tag">Pressearbeit</span>
-      </div>
-
-      <a href="#contact" class="cta">Kontakt aufnehmen</a>
-    </div>
-
-    <aside class="hero-right">
-      <img src="Foto_Matthias Zahner.png" alt="Matthias Zahner">
-      <p>
-        Praxis aus Redaktion, Klinikkommunikation sowie Sport- und Vereinsarbeit.
-      </p>
-    </aside>
-  </section>
-
-  <!-- VIDEO -->
-  <section id="video">
-    <h2>Kurz vorgestellt</h2>
-    <p>
-      In diesem kurzen Reel stelle ich mich und meine Arbeit persönlich vor.
+  <section>
+    <h1>Redaktion & Social Media<br>für <span>klare, glaubwürdige Kommunikation</span></h1>
+    <p class="lead">
+      Ich bin Redakteur mit journalistischem Hintergrund und Social-Media-Schwerpunkt.
+      Ich bringe Themen strukturiert auf den Punkt – verständlich, zielgruppengerecht und digital gedacht.
     </p>
-
-    <div class="video-wrapper">
-      <iframe
-        src="https://www.youtube.com/embed/DcK7MyxS9Zk"
-        title="Reel Matthias Zahner"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
-    </div>
+    <a class="btn" href="#work">Arbeitsproben ansehen</a>
   </section>
 
   <!-- ABOUT -->
   <section id="about">
     <h2>Über mich</h2>
-    <p>
-      Nach meinem Journalistik-Studium (B.A.) habe ich mehrere Jahre als Redakteur gearbeitet
-      und anschließend in der Unternehmenskommunikation eines Großklinikums Social-Media-
-      und Kommunikationsformate umgesetzt. Parallel engagiere ich mich als Pressesprecher
-      eines Sportvereins und habe eine berufsbegleitende Weiterbildung im Social-Media-Marketing
-      erfolgreich abgeschlossen.
-    </p>
+
+    <div class="card">
+      <p>
+        Ich komme aus dem Journalismus und habe mehrere Jahre als Redakteur gearbeitet.
+        Anschließend war ich im Bereich Social Media und Unternehmenskommunikation tätig –
+        unter anderem in einem Großklinikum sowie in der Vereins- und Sportkommunikation.
+      </p>
+      <p>
+        Ergänzend habe ich eine berufsbegleitende Weiterbildung im Social-Media-Marketing
+        erfolgreich abgeschlossen und verbinde heute redaktionelle Erfahrung mit
+        strategischem Plattform-Know-how.
+      </p>
+
+      <!-- YOUTUBE REEL -->
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/DcK7MyxS9Zk"
+          title="Reel Matthias Zahner"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work">
+    <h2>Arbeitsproben</h2>
+
+    <div class="grid">
+      <div class="card">
+        <strong>TC Nusplingen – Reels</strong><br>
+        <a href="https://www.instagram.com/p/DNS-egbtXce/" target="_blank">Saisonrückblick</a><br>
+        <a href="https://www.instagram.com/p/DMxWiVEtIvI/" target="_blank">Jedermannturnier</a><br>
+        <a href="https://www.instagram.com/p/DMNFqHQtlO9/" target="_blank">Turniervorschau</a>
+      </div>
+
+      <div class="card">
+        <strong>Stuttgarter Zeitung</strong><br>
+        <a href="https://www.stuttgarter-zeitung.de/inhalt.interview-mit-kommentator-friedrich-zuschauern-nicht-auf-den-wecker-gehen.fb9a9f4f-cad0-4b71-bd19-e13511fb840f.html" target="_blank">
+          Interview mit Kommentator Friedrich
+        </a>
+      </div>
+
+      <div class="card">
+        <strong>kapstadt.com</strong><br>
+        <a href="https://kapstadtcom.blogspot.com/2015/03/garden-route-uber-sudtirol-nach-hawaii.html" target="_blank">
+          Garden Route Reportage
+        </a>
+      </div>
+    </div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact">
     <h2>Kontakt</h2>
-    <p>
-      Sie möchten über ein Projekt sprechen oder mehr über meine Arbeit erfahren?
-    </p>
-    <p>
-      <a href="mailto:matthias.zahner2311@gmail.com">matthias.zahner2311@gmail.com</a>
-    </p>
+    <p>Ich freue mich über einen Austausch.</p>
+    <a class="btn" href="mailto:matthias.zahner2311@gmail.com">E-Mail schreiben</a>
   </section>
 
 </main>
